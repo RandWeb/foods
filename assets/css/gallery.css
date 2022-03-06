@@ -1,0 +1,132 @@
+#gallery {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-hero-color);
+    padding: 4rem 0;
+}
+
+.gallery__title {
+    margin: 6rem 0;
+    font-size: var(--size-xxxlarge);
+    font-weight: 900;
+    color: var(--text-color1);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--size-xxsmall);
+    text-shadow: .3rem .3rem 3.rem var(--bg-header-color);
+}
+
+.gallery__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.gallery__link::before {
+    content: "";
+    width: 0%;
+    height: .2rem;
+    background-color: white;
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    border-radius: .5rem;
+    transition: all .4s;
+    z-index: 900;
+}
+
+.gallery__link {
+    width: 21vw;
+    height: 13vw;
+    margin: 4rem;
+    position: relative;
+}
+
+.gallery__link::after {
+    content: "";
+    width: .2rem;
+    height: 0%;
+    background-color: white;
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+    border-radius: .5rem;
+    transition: all .4s;
+    z-index: 100;
+}
+
+.gallery__link:hover::before {
+    width: 92%;
+}
+
+.gallery__link:hover::after {
+    height: 80%;
+}
+
+.gallery__link-img {
+    width: 24vw;
+    height: 15vw;
+    box-shadow:
+        0.3rem 0.3rem 0.1rem #e92929,
+        0.5rem 0.5rem 0.1rem #a2e946,
+        0.7rem 0.7rem 0.1rem #297ce9,
+        0.9rem 0.9rem 0.1rem #e92999;
+    transition: all .5s;
+}
+
+.gallery__link:hover .gallery__link-img {
+    box-shadow:
+        1rem 1rem 0.1rem #e92929,
+        2rem 2rem 0.1rem #a2e946,
+        3rem 3rem 0.1rem #297ce9,
+        4rem 4rem 0.1rem #e92999;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
+
+.gallery__link-title {
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 700;
+    left: 2rem;
+    top: 10%;
+    color: var(--text-color1);
+    text-transform: capitalize;
+    font-size: var(--size-large);
+    transition: width .5s
+}
+
+.gallery__link:hover .gallery__link-title {
+    width: 100%;
+    transition: width 1.5s .5s;
+}
+
+.gallery__link:hover .gallery__link-description {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s 1s;
+}
+
+.gallery__link-description {
+    width: 70%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 2rem;
+    top: 40%;
+    color: var(--text-color3);
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition: opacity .3s;
+}

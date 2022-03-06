@@ -1,0 +1,106 @@
+#meals {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-meals-color);
+    padding: 4rem 0;
+}
+
+.meals__title {
+    margin-bottom: 12rem;
+    font-size: var(--size-xxxlarge);
+    font-weight: 900;
+    color: var(--text-color1);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--size-xxsmall);
+    text-shadow: .3rem .3rem 3.rem var(--bg-header-color);
+}
+
+.wrapper__meals {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.meals__card::before {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    background-color: var(--icon-color2);
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bg-hero-color);
+}
+
+.meals__card {
+    position: relative;
+    width: 30rem;
+    padding: 4rem;
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--icon-color);
+    box-shadow: 1rem 1rem 1rem var(--bg-header-color);
+    transform: rotateY(20deg) skewX(-2deg);
+    transition: all .5s;
+}
+
+.meals__card:hover {
+    transform: rotate(20deg) skewX(-2dg) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem 2rem var(--bg-header-color);
+}
+
+.meals__card::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: var(--icon-color3);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bg-hero-color);
+}
+
+.meals__card-img {
+    width: 100%;
+}
+
+.meals__card-name {
+    font-size: var(--size-medium);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--text-color4);
+    margin: 2rem 0;
+    text-shadow: .15rem .15rem .15rem var(--bg-header-color);
+}
+
+
+.meals__card-btn {
+    width: 70%;
+    background-color: var(--text-color4);
+    color: var(--text-color2);
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    padding: .5rem 0;
+    box-shadow: -0.2rem -0.2rem -0.2rem -0.2rem var(--bg-header-color);
+}
