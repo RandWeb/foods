@@ -37,7 +37,7 @@
     height: .2rem;
     background-color: white;
     position: absolute;
-    top: 7rem;
+    top: 33%;
     left: 2rem;
     border-radius: .5rem;
     transition: all .4s;
@@ -58,7 +58,7 @@
     background-color: white;
     position: absolute;
     top: 4rem;
-    right: 3rem;
+    right: 15%;
     border-radius: .5rem;
     transition: all .4s;
     z-index: 100;

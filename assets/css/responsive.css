@@ -1,0 +1,42 @@
+@media (max-width:1400px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width:1000px) {
+    html {
+        font-size: 50%;
+    }
+    .gallery__link {
+        width: 30vw;
+        height: 16vw;
+        margin: 5rem;
+    }
+
+    .gallery__link-img {
+        width: 28vw;
+        height: 18vw;
+    }
+}
+@media (max-width:700px) {
+    html {
+        font-size: 50%;
+    }
+    .gallery__link {
+        width: 30vw;
+        height: 16vw;
+        margin: 5rem;
+    }
+
+    .gallery__link-img {
+        width: 28vw;
+        height: 18vw;
+    }
+    .gallery__link-title {
+        font-size: var(--size-medium);
+    }
+    .gallery__link-description {
+        font-size: 1.4rem;
+    }
+}
