@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /*bg colors*/
+    --bg-header-color: #000;
+    --bg-hero-color: #333;
+    --bg-meals-color: #222;
+    --icon-color: #a79a2d;
+    --icon-color2: #817824;
+    --icon-color3: #8f8317;
+    /*text color*/
+    --text-color1: #fff;
+    --text-color2: #aaa;
+    --text-color3: #eee;
+    --text-color4: #111;
+
+    /*size*/
+    --size-xxsmall: .5rem;
+    --size-xsmall: 1rem;
+    --size-small: 1.5rem;
+    --size-medium: 2rem;
+    --size-xmedium: 2.5rem;
+    --size-xxmedium: 3rem;
+    --size-large: 4rem;
+    --size-xlarge: 4.5rem;
+    --size-xxlarge: 6rem;
+    --size-xxxlarge: 12rem;
+
+}
+
+.hero__wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bg-hero-color);
+}
+
+.hero__title {
+    font-size: var(--size-xxxlarge);
+    font-weight: 900;
+    color: var(--text-color1);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--size-xxsmall);
+    text-shadow: .3rem .3rem 3.rem var(--bg-header-color);
+}
+
+.hero__icons i {
+    font-size: 35rem;
+    color: var(--icon-color);
+    position: absolute;
+    text-shadow: .2rem .2rem .2rem var(--bg-header-color);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s .3s;
+}
+
+.hero__icons i.change {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .3s .3s;
+}
+
+
+/**/
+#meals {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-meals-color);
+}
+.meals__title {
+    margin-bottom: 12rem ;
+    font-size: var(--size-xxxlarge);
+    font-weight: 900;
+    color: var(--text-color1);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--size-xxsmall);
+    text-shadow: .3rem .3rem 3.rem var(--bg-header-color);
+}
+.wrapper__meals {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.meals__card::before {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    background-color: var(--icon-color2);
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bg-hero-color);
+}
+
+.meals__card {
+    position: relative;
+    width: 30rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--icon-color);
+    box-shadow: 1rem 1rem 1rem var(--bg-header-color);
+    transform: rotateY(20deg) skewX(-2deg);
+    transition: all .5s;
+}
+
+.meals__card:hover {
+    transform: rotate(20deg) skewX(-2dg) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem 2rem var(--bg-header-color);
+}
+
+.meals__card::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: var(--icon-color3);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bg-hero-color);
+}
+
+.meals__card-img {
+    width: 100%;
+}
+
+.meals__card-name {
+    font-size: var(--size-medium);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--text-color4);
+    margin: 2rem 0;
+    text-shadow: .15rem .15rem .15rem var(--bg-header-color);
+}
+
+
+.meals__card-btn {
+    width: 70%;
+    background-color: var(--text-color4);
+    color: var(--text-color2);
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    padding: .5rem 0;
+    box-shadow: -0.2rem -0.2rem -0.2rem -0.2rem var(--bg-header-color);
+}
+
+/**/
+#gallery {
+    height: 60vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-hero-color);
+}
+
+.gallery__title {
+    margin: 6rem 0;
+    font-size: var(--size-xxxlarge);
+    font-weight: 900;
+    color: var(--text-color1);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--size-xxsmall);
+    text-shadow: .3rem .3rem 3.rem var(--bg-header-color);
+}
+
+.gallery__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.gallery__link::before {
+    content: "";
+    width: 0%;
+    height: .2rem;
+    background-color: white;
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    border-radius: .5rem;
+    transition: all .4s
+}
+
+.gallery__link {
+    width: 21vw;
+    height: 13vw;
+    margin: 4rem;
+    position: relative;
+}
+
+.gallery__link::after {
+    content: "";
+    width: .2rem;
+    height: 0%;
+    background-color: white;
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+    border-radius: .5rem;
+    transition: all .4s
+}
+.gallery__link:hover::before{
+    width: 92%;
+}
+.gallery__link:hover::after{
+    height: 80%;
+}
+.gallery__link-img {
+    width: 24vw;
+    height: 15vw;
+    box-shadow:
+    0.3rem 0.3rem 0.1rem #e92929,
+    0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9,
+    0.9rem 0.9rem 0.1rem #e92999;
+}
+
+.gallery__link-title {
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 700;
+    left: 2rem;
+    top: 10%;
+    color: var(--text-color1);
+    text-transform: capitalize;
+    font-size: var(--size-large);
+    transition: width .5s
+}
+
+.gallery__link:hover .gallery__link-title{
+    width: 100%;
+    transition: width 1.5s .5s;
+}
+.gallery__link:hover .gallery__link-description{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s 1s;
+}
+.gallery__link-description {
+    width: 70%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 2rem;
+    top: 40%;
+    color: var(--text-color3);
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition: opacity .3s;
+}
